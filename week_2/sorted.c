@@ -32,10 +32,12 @@ int main(int argc, char* argv[]) {
 // - return value = ∀ i ∈ {0..n-2} ( a[i] ≤ a[i+1] )
 int isSorted(int* a, int size) {
   int i = 0;
-  for(i = 0; i < size-1; i++) {
-    if(a[i] > a[i+1]) {
+
+  while (i < size-1) {
+    if (a[i] > a[i+1]) {
       return FALSE;
     }
+    i++;
   }
   return TRUE;
 }

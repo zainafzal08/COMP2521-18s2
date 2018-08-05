@@ -12,6 +12,7 @@ Who am i?
 2. discuss what you learned from COMP1511
 	- https://play.kahoot.it/#/k/5271ac47-788c-4944-b812-d60c70ad2ea4
 3. discuss what parts you're still unsure of
+	- linked list / recurrsion question in sum.c
 4. choose lab partners (who you'll work with until week 6)
 
 #### Group
@@ -28,11 +29,9 @@ You should all make a facebook group or discord or slack.
 #### Resources
 
 I will put help documents up as well as any code we write together up on
-the class github (i've set up shorcuts you can use to get there below)
+the class github
 
-www.zainafzal.com/2521
-www.zainafzal.com/cs2521
-www.zainafzal.com/comp2521
+https://github.com/zainafzal08/COMP2521-18s2
 
 #### Repel
 

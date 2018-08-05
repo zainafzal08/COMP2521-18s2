@@ -30,20 +30,16 @@ int main(int argc, char* argv[]) {
 }
 
 int sum(List head) {
-  Node *curr = head;
+  List curr = head;
 	int sum = 0;
-	while (curr != NULL) {
-		sum = sum + curr->value;
+	while(curr != NULL) {
+		sum += curr->value;
 		curr = curr->next;
 	}
 	return sum;
 }
 
 int sumRec(List head){
-	// the sum of a empty list is 0
-	if (head == NULL) {
-		return 0;
-	}
-	// the sum of a list is the sum of the first node + the sum of the rest
+	if(!head) return 0;
 	return head->value + sumRec(head->next);
 }
