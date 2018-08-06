@@ -16,8 +16,24 @@ Link newNode(int val) {
   return n;
 }
 
+int inList(Link head, int v, Link stop) {
+  Link curr = head;
+  while(curr != NULL && curr != stop) {
+    if(curr->value == v) return TRUE;
+    curr = curr->next;
+  }
+  return FALSE;
+}
+
 int bagNumUniq(Bag b) {
-  return 0;
+  Link curr = b->list;
+  Link head = b->list;
+  int c = 0;
+  while (curr != NULL) {
+    if (!inList(head,curr->value,curr)) c++;
+    curr = curr->next;
+  }
+  return c;
 }
 
 int main(void) {
@@ -38,4 +54,3 @@ int main(void) {
   printf("We got %d elements!\n",bagNumUniq(b));
   return 0;
 }
-

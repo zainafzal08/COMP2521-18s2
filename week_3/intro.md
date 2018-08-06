@@ -43,8 +43,6 @@ Whats up!
 
 > Write BagNumUniq
 
-
-
 > If we have three 8-bit unsigned char variables, x, y and z with the following initial values:
 
 ```
