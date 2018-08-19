@@ -5,7 +5,7 @@
 #define FALSE 0
 
 #define FORWARDS 1
-#define BACKWARDS 1
+#define BACKWARDS 0
 
 typedef struct ListNode *Link;
 
@@ -21,7 +21,7 @@ typedef Link List;
 #define empty(L) ((L) == NULL)
 
 // display the value contained in a ListNode
-#define show(V) { printf("%d->",(V)); }
+#define show(V) { printf("%d->",(V->value)); }
 
 Link newNode(int val);
 void drop(List L);
@@ -48,11 +48,20 @@ Link newNode(int val) {
 }
 
 void drop(List L) {
-
+  if(!L) return;
+  drop(L->next);
+  free(L);
 }
 
 // print a list backwards
 // or fowards depending on flag
 void magic(List L, int flag) {
-
+  if(!L) return;
+  if(flag == BACKWARDS) {
+    magic(L->next,flag);
+    show(L);
+  } else {
+    show(L);
+    magic(L->next,flag);
+  }
 }

@@ -51,5 +51,8 @@ void showList(List l) {
 }
 
 List copy(List l) {
-  return NULL;
+  if(!l) return NULL;
+  Link new = newNode(l->value);
+  new->next = copy(l->next);
+  return new;
 }

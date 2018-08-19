@@ -72,7 +72,8 @@ int add(int a, int b) {
 // implement these
 
 int findLength(List l) {
-  return 0;
+  map(l,one);
+  return fold(l,add,0);
 }
 void drop(List l) {
 
