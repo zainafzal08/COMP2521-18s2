@@ -1,8 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int getMin(int* array, int size) {
+  int i = 0;
+  while(i < size) {
+    
+    i++;
+  }
+}
 int* selectionSort(int* array, int size) {
-
+  int j = 0;
+  int* newArray = malloc(sizeof(int)*size);
+  while (j < size ){
+    newArray[j] = getMin(array, size);
+    j++;
+  }
+  return newArray;
 }
 
 int main(int argc, char* argv[]) {
