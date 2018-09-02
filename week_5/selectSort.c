@@ -3,10 +3,12 @@
 
 int getMin(int* array, int size) {
   int i = 0;
+  int m = array[0];
   while(i < size) {
-    
+    if (m > array[i]) m = array[i];
     i++;
   }
+  return m;
 }
 int* selectionSort(int* array, int size) {
   int j = 0;
