@@ -5,7 +5,33 @@
 
 #define MAX_V 6
 
+Set reachable(Graph g, Vertex v) {
+  Set result = newSet();
+  Queue todo = newQueue();
+  while (!isEmpty(todo)) {
+    Vertex toVisit = leaveQueue(todo);
+    setAdd(result,v);
+    int size = 0;
+    int* n = getNeighbours(g,toVisit,&size);
+    int i = 0;
+    for(i=0;i < size; i++) {
+        enterQueue(todo,n[i]);
+    }
+  }
+  return result;
+}
 
+
+
+
+
+
+
+
+
+
+
+/*
 Set reachable(Graph g, Vertex v) {
   Set result = newSet(MAX_V);
   Queue q = newQueue();
@@ -22,7 +48,7 @@ Set reachable(Graph g, Vertex v) {
     }
   }
   return result;
-}
+}*/
 
 int main(int argc, char* argv[]) {
   Graph g = newGraph(MAX_V);
