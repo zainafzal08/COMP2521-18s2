@@ -11,3 +11,5 @@ Whats up!
 #### Questions
 
 https://cgi.cse.unsw.edu.au/~cs2521/18s2/tutors/tutes/week09/
+
+https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/PrimAlgDemo.gif/200px-PrimAlgDemo.gif
